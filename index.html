@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3</title>
+    <style>
+      .radius {
+        background: red;
+        height: 100px;
+        width: 100px;
+        border-radius: 10px 80px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-right: 6px;
+        box-shadow: 10px 10px green;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .flex:hover .radius {
+        border-top-left-radius: 0;
+      }
+      .radius:hover {
+        border-radius: 10px;
+      }
+
+      .line {
+        width: 1px;
+        height: 100%;
+        background: blue;
+      }
+
+      .degradado {
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(
+          to bottom,
+          red,
+          blue,
+          green,
+          black,
+          white,
+          yellow
+        );
+        background: linear-gradient(
+          to bottom right,
+          red,
+          blue,
+          green,
+          black,
+          white,
+          yellow
+        );
+        transition: border-radius 2s ease;
+      }
+
+      .degradado:hover {
+        border-radius: 10px;
+        opacity: 0.5;
+        width: 100px;
+      }
+
+      input {
+        transition: all 0.5s ease;
+        border: 1px solid white;
+      }
+
+      input:focus {
+        outline: none;
+        box-shadow: 0 0 10px blue;
+        border-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="radius"></div>
+      <div class="radius"></div>
+    </div>
+    <br />
+
+    <div class="degradado"></div>
+    <br />
+
+    <div class="degradado">
+      <br /><br /><br /><br />
+      <input type="text" />
+    </div>
+    <br />
+  </body>
 </html>
