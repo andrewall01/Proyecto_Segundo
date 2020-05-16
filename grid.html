@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows:  100px 100px 100px 100px;
+        }
+
+        .grid div{
+            background-color: red;
+        }
+
+        .grid div:nth-child(even){
+            background: chartreuse;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+
+    <style>
+        .areas{
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-template-rows: 120px 120px 120px;
+            grid-template-areas: "header header header header"
+            "nav section section aside" "footer footer footer footer";
+        }
+
+        header{
+            grid-area: header ;
+            background: red;
+        }
+        nav{
+            grid-area: nav ;
+            background: yellow;
+        }
+        aside{
+            grid-area: aside ;
+            background: blue;
+        }
+        section{
+            grid-area: section ;
+            background: brown;
+        }
+        footer{
+            grid-area: footer ;
+            background: green;
+        }
+    </style>
+    <div class="areas">
+        <header>header</header>
+        <nav>nav</nav>
+        <aside>aside</aside>
+        <section>section</section>
+        <footer>footer</footer>
+    </div>
+  </body>
+</html>
