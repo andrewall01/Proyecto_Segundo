@@ -77,7 +77,7 @@ main h1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  justify-content: center;
+  justify-items: center;
 }
 
 .form input {
@@ -94,7 +94,6 @@ main h1 {
   color: white;
   width: 226px;
 }
-
 
 /*Footer*/
 
